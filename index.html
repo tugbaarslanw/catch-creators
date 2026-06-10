@@ -83,7 +83,7 @@ a {
   background: #050505;
   color: white;
   min-height: 100vh;
-  padding: 90px 24px;
+  padding: 96px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,7 +91,7 @@ a {
 
 .second-wrap {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -107,19 +107,20 @@ a {
 }
 
 .second-title {
-  font-size: clamp(42px, 7vw, 86px);
-  line-height: 0.95;
-  letter-spacing: -4px;
-  margin: 0 auto 22px;
-  max-width: 980px;
+  font-size: clamp(36px, 5.2vw, 66px);
+  line-height: 1.02;
+  letter-spacing: -2.5px;
+  margin: 0 auto 20px;
+  max-width: 940px;
+  color: white;
 }
 
 .second-text {
-  font-size: clamp(17px, 2vw, 22px);
+  font-size: clamp(16px, 1.7vw, 20px);
   color: #d7d7d7;
-  max-width: 780px;
-  margin: 0 auto 42px;
-  line-height: 1.5;
+  max-width: 760px;
+  margin: 0 auto 34px;
+  line-height: 1.55;
 }
 
 .platform-row {
@@ -127,13 +128,13 @@ a {
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 42px;
+  margin-bottom: 44px;
 }
 
 .platform {
   border: 1px solid #333;
   color: white;
-  padding: 11px 15px;
+  padding: 10px 14px;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
@@ -144,16 +145,20 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  margin-top: 20px;
+  margin: 0 auto;
 }
 
 .service-card {
   background: #0b0b0b;
   border: 1px solid #222;
-  border-radius: 28px;
-  padding: 28px;
-  text-align: left;
-  min-height: 235px;
+  border-radius: 26px;
+  padding: 28px 24px;
+  text-align: center;
+  min-height: 215px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .service-icon {
@@ -166,11 +171,11 @@ a {
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  margin-bottom: 54px;
+  margin-bottom: 24px;
 }
 
 .service-card h3 {
-  font-size: 26px;
+  font-size: 25px;
   line-height: 1;
   letter-spacing: -1px;
   margin: 0 0 12px;
@@ -182,11 +187,11 @@ a {
   line-height: 1.5;
   color: #cfcfcf;
   margin: 0;
-  max-width: none;
+  max-width: 310px;
 }
 
 .second-actions {
-  margin-top: 46px;
+  margin-top: 42px;
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -194,22 +199,40 @@ a {
 }
 
 @media (max-width: 900px) {
+  .second-landing {
+    padding: 76px 20px;
+  }
+
   .service-grid {
     grid-template-columns: 1fr;
+    max-width: 520px;
   }
 
-  .second-landing {
-    padding: 72px 20px;
+  .second-title {
+    font-size: clamp(36px, 9vw, 54px);
+    letter-spacing: -2px;
+  }
+}
+
+@media (max-width: 520px) {
+  .box {
+    padding: 32px 20px;
   }
 
-  .service-card {
-    text-align: center;
+  h1 {
+    letter-spacing: -3px;
   }
 
-  .service-icon {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 28px;
+  .buttons,
+  .second-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    max-width: 280px;
   }
 }
 ```
@@ -260,49 +283,37 @@ a {
     <div class="service-card">
       <div class="service-icon">AI</div>
       <h3>AI Visuals</h3>
-      <p>
-        Creator profiline, marka duruşuna ve kampanya fikrine uygun premium AI görsel içerikler.
-      </p>
+      <p>Creator profiline ve marka duruşuna uygun premium AI görsel içerikler.</p>
     </div>
 
     <div class="service-card">
       <div class="service-icon">▶</div>
       <h3>AI Video & Reels</h3>
-      <p>
-        Sosyal medyada dikkat çeken kısa video fikirleri, reels konseptleri ve kreatif video üretimleri.
-      </p>
+      <p>Sosyal medyada dikkat çeken kısa video fikirleri ve reels konseptleri.</p>
     </div>
 
     <div class="service-card">
       <div class="service-icon">☺</div>
       <h3>Face Filters</h3>
-      <p>
-        İçerik üreticilerine özel, eğlenceli ve paylaşılabilir yüz filtresi konseptleri.
-      </p>
+      <p>İçerik üreticilerine özel, eğlenceli ve paylaşılabilir yüz filtresi konseptleri.</p>
     </div>
 
     <div class="service-card">
       <div class="service-icon">GIF</div>
       <h3>Motion Assets</h3>
-      <p>
-        Creator kimliğini daha görünür yapan hareketli sosyal medya varlıkları.
-      </p>
+      <p>Creator kimliğini daha görünür yapan hareketli sosyal medya varlıkları.</p>
     </div>
 
     <div class="service-card">
       <div class="service-icon">★</div>
       <h3>Stickers</h3>
-      <p>
-        Kişiye, markaya veya kampanyaya özel sticker setleri ve dijital ifade paketleri.
-      </p>
+      <p>Kişiye, markaya veya kampanyaya özel sticker setleri ve dijital ifade paketleri.</p>
     </div>
 
     <div class="service-card">
       <div class="service-icon">CC</div>
       <h3>Creator Kit</h3>
-      <p>
-        Görsel, video, sticker ve sosyal medya kullanımına hazır kreatif içerik paketi.
-      </p>
+      <p>Görsel, video, sticker ve sosyal medya kullanımına hazır kreatif içerik paketi.</p>
     </div>
   </div>
 
