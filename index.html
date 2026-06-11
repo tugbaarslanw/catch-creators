@@ -185,6 +185,86 @@
       transform: translateY(-2px);
     }
 
+    .platforms-section {
+      min-height: 100vh;
+      padding: 120px 20px 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #050505;
+    }
+
+    .platforms-wrap {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .platform-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      max-width: 980px;
+      margin: 48px auto 0;
+    }
+
+    .platform-button {
+      min-width: 170px;
+      height: 64px;
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015)),
+        #0b0b0b;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 24px 70px rgba(0, 0, 0, 0.35);
+      transition: 0.2s ease;
+    }
+
+    .platform-button:hover {
+      transform: translateY(-3px);
+      border-color: rgba(182, 255, 0, 0.42);
+      color: #b6ff00;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 24px 70px rgba(0, 0, 0, 0.45),
+        0 18px 46px rgba(182, 255, 0, 0.08);
+    }
+
+    .platform-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: rgba(182, 255, 0, 0.13);
+      color: #b6ff00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .platform-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     .services-section {
       min-height: 100vh;
       padding: 120px 20px 80px;
@@ -337,9 +417,616 @@
       text-align: center;
     }
 
+    .how-section {
+      min-height: 100vh;
+      padding: 120px 20px 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #050505;
+    }
+
+    .how-wrap {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .process-row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 48px;
+      margin: 58px auto 0;
+      position: relative;
+    }
+
+    .process-card {
+      min-height: 205px;
+      padding: 42px 18px 24px;
+      border-radius: 18px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015)),
+        #0b0b0b;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 24px 70px rgba(0, 0, 0, 0.35);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .process-card:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 12px);
+      width: 25px;
+      border-top: 3px dotted rgba(255, 255, 255, 0.45);
+      transform: translateY(-50%);
+    }
+
+    .process-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(182, 255, 0, 0.35);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 24px 70px rgba(0, 0, 0, 0.45),
+        0 18px 46px rgba(182, 255, 0, 0.08);
+    }
+
+    .process-number {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: #b6ff00;
+      color: #050505;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 800;
+      box-shadow: 0 0 22px rgba(182, 255, 0, 0.35);
+    }
+
+    .process-icon {
+      width: 44px;
+      height: 44px;
+      color: #b6ff00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    .process-icon svg {
+      width: 38px;
+      height: 38px;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .process-card h3 {
+      font-size: 15px;
+      line-height: 1.2;
+      margin: 0 0 14px;
+      letter-spacing: -0.35px;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .process-card p {
+      font-size: 12px;
+      color: #d0d0d0;
+      line-height: 1.55;
+      margin: 0;
+      max-width: 150px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .packages-section {
+      min-height: 100vh;
+      padding: 120px 20px 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #050505;
+    }
+
+    .packages-wrap {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin: 54px auto 0;
+      align-items: stretch;
+    }
+
+    .package-card {
+      min-height: 405px;
+      padding: 28px 22px 22px;
+      border-radius: 18px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.012)),
+        #050505;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        0 24px 80px rgba(0, 0, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      position: relative;
+      overflow: visible;
+      transition: 0.2s ease;
+    }
+
+    .package-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(182, 255, 0, 0.38);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 24px 80px rgba(0, 0, 0, 0.55),
+        0 20px 55px rgba(182, 255, 0, 0.08);
+    }
+
+    .package-card.featured {
+      border-color: rgba(182, 255, 0, 0.55);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 24px 80px rgba(0, 0, 0, 0.55),
+        0 0 42px rgba(182, 255, 0, 0.08);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #b6ff00;
+      color: #050505;
+      height: 26px;
+      padding: 0 16px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      white-space: nowrap;
+      box-shadow: 0 0 20px rgba(182, 255, 0, 0.35);
+    }
+
+    .package-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .package-icon {
+      width: 44px;
+      min-width: 44px;
+      height: 44px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .package-icon svg {
+      width: 42px;
+      height: 42px;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .package-card.featured .package-icon {
+      color: #b6ff00;
+    }
+
+    .package-name {
+      font-size: 21px;
+      line-height: 1.1;
+      letter-spacing: -0.7px;
+      font-weight: 800;
+      margin: 0 0 2px;
+      text-align: left;
+    }
+
+    .price-line {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      margin-top: 2px;
+      flex-wrap: wrap;
+    }
+
+    .price {
+      color: #b6ff00;
+      font-size: 41px;
+      line-height: 0.92;
+      letter-spacing: -1.6px;
+      font-weight: 800;
+    }
+
+    .one-time {
+      color: #b6ff00;
+      font-size: 13px;
+      font-weight: 800;
+      padding-bottom: 4px;
+    }
+
+    .package-description {
+      font-size: 15px;
+      color: #cfcfcf;
+      line-height: 1.55;
+      margin: 0 0 18px;
+      max-width: 300px;
+      text-align: left;
+    }
+
+    .package-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .package-features li {
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.25;
+      font-weight: 500;
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .package-features li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #b6ff00;
+      font-size: 11px;
+      line-height: 1.3;
+    }
+
+    .package-button {
+      margin-top: auto;
+      width: 100%;
+      height: 52px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: #b6ff00;
+      background: transparent;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s ease;
+    }
+
+    .package-button:hover {
+      border-color: #b6ff00;
+      background: rgba(182, 255, 0, 0.08);
+    }
+
+    .package-card.featured .package-button {
+      background: #b6ff00;
+      color: #050505;
+      border-color: #b6ff00;
+      box-shadow: 0 0 28px rgba(182, 255, 0, 0.28);
+    }
+
+    .package-card.featured .package-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(182, 255, 0, 0.25);
+    }
+
+    .brief-section {
+      min-height: 100vh;
+      padding: 120px 20px 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #050505;
+    }
+
+    .brief-wrap {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .brief-form {
+      width: 100%;
+      margin: 54px auto 0;
+      padding: 28px;
+      border-radius: 24px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.012)),
+        #070707;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 28px 90px rgba(0, 0, 0, 0.5);
+      text-align: left;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: -0.25px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      min-height: 54px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #0d0d0d;
+      color: #ffffff;
+      font-family: "Plus Jakarta Sans", Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 15px 16px;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    .form-group textarea {
+      min-height: 132px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #7d7d7d;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: rgba(182, 255, 0, 0.65);
+      box-shadow: 0 0 0 4px rgba(182, 255, 0, 0.08);
+    }
+
+    .upload-box {
+      width: 100%;
+      min-height: 118px;
+      border-radius: 18px;
+      border: 1px dashed rgba(182, 255, 0, 0.45);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(182, 255, 0, 0.09), transparent 32%),
+        #0d0d0d;
+      color: #d7d7d7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.5;
+      transition: 0.2s ease;
+    }
+
+    .upload-box:hover {
+      border-color: #b6ff00;
+      color: #b6ff00;
+    }
+
+    .upload-box input {
+      display: none;
+    }
+
+    .submit-brief {
+      width: 100%;
+      height: 58px;
+      margin-top: 24px;
+      border: 0;
+      border-radius: 999px;
+      background: #b6ff00;
+      color: #050505;
+      font-family: "Plus Jakarta Sans", Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: 0.2s ease;
+      box-shadow: 0 0 28px rgba(182, 255, 0, 0.22);
+    }
+
+    .submit-brief:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(182, 255, 0, 0.25);
+    }
+
+    .site-footer {
+      padding: 64px 20px;
+      background: #050505;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr 1fr 1.35fr;
+      gap: 36px;
+      text-align: left;
+      align-items: start;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 18px;
+      color: #ffffff;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      text-transform: capitalize;
+      text-align: left;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: #d7d7d7;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #b6ff00;
+    }
+
+    .newsletter-text {
+      margin: 0 0 16px;
+      color: #d7d7d7;
+      font-size: 14px;
+      line-height: 1.55;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .newsletter-form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      min-width: 0;
+      height: 52px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #0d0d0d;
+      color: #ffffff;
+      font-family: "Plus Jakarta Sans", Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 0 18px;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #7d7d7d;
+    }
+
+    .newsletter-form input:focus {
+      border-color: rgba(182, 255, 0, 0.65);
+      box-shadow: 0 0 0 4px rgba(182, 255, 0, 0.08);
+    }
+
+    .newsletter-form button {
+      height: 52px;
+      border: 0;
+      border-radius: 999px;
+      background: #b6ff00;
+      color: #050505;
+      font-family: "Plus Jakarta Sans", Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 0 24px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .newsletter-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(182, 255, 0, 0.22);
+    }
+
+    @media (max-width: 1100px) {
+      .process-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 42px 24px;
+      }
+
+      .process-card:not(:last-child)::after {
+        display: none;
+      }
+    }
+
     @media (max-width: 980px) {
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .packages-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
       }
     }
 
@@ -380,6 +1067,20 @@
         font-size: 18px;
       }
 
+      .platforms-section {
+        padding-top: 120px;
+      }
+
+      .platform-buttons {
+        gap: 12px;
+        margin-top: 38px;
+      }
+
+      .platform-button {
+        width: 100%;
+        max-width: 340px;
+      }
+
       .services-section {
         padding-top: 120px;
       }
@@ -400,6 +1101,84 @@
 
       .service-card p {
         font-size: 14px;
+      }
+
+      .how-section {
+        padding-top: 120px;
+      }
+
+      .process-row {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        max-width: 360px;
+      }
+
+      .process-card {
+        min-height: auto;
+        padding: 42px 22px 28px;
+      }
+
+      .process-card p {
+        max-width: 230px;
+        font-size: 13px;
+      }
+
+      .packages-section {
+        padding-top: 120px;
+      }
+
+      .package-card {
+        min-height: auto;
+        padding: 28px 20px 22px;
+      }
+
+      .package-top {
+        gap: 14px;
+      }
+
+      .package-name {
+        font-size: 20px;
+      }
+
+      .price {
+        font-size: 38px;
+      }
+
+      .brief-section {
+        padding-top: 120px;
+      }
+
+      .brief-form {
+        padding: 22px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+      }
+
+      .footer-brand {
+        justify-content: center;
+      }
+
+      .footer-column h3,
+      .newsletter-text {
+        text-align: center;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form input,
+      .newsletter-form button {
+        width: 100%;
       }
     }
   </style>
@@ -436,6 +1215,68 @@
       </div>
     </div>
   </main>
+
+  <section class="platforms-section" id="platforms">
+    <div class="platforms-wrap">
+      <div class="section-kicker">Supported Platforms</div>
+
+      <h2>built for the platforms where creators grow.</h2>
+
+      <div class="platform-buttons">
+        <a href="#services" class="platform-button">
+          <span class="platform-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="4" y="4" width="16" height="16" rx="5"></rect>
+              <circle cx="12" cy="12" r="3.2"></circle>
+              <path d="M17.2 6.8h.01"></path>
+            </svg>
+          </span>
+          Instagram
+        </a>
+
+        <a href="#services" class="platform-button">
+          <span class="platform-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M14 4v10.2a4.2 4.2 0 1 1-4.2-4.2"></path>
+              <path d="M14 6.5c1.2 2.2 2.8 3.4 5 3.6"></path>
+            </svg>
+          </span>
+          TikTok
+        </a>
+
+        <a href="#services" class="platform-button">
+          <span class="platform-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3.5c3 0 5 2.3 5 5.5v3.2c0 1.4 1.1 2.2 2.4 2.6-.8 1.1-2 1.3-3 1.3-.7 1.5-2.2 2.4-4.4 2.4s-3.7-.9-4.4-2.4c-1 0-2.2-.2-3-1.3 1.3-.4 2.4-1.2 2.4-2.6V9c0-3.2 2-5.5 5-5.5z"></path>
+            </svg>
+          </span>
+          Snapchat
+        </a>
+
+        <a href="#services" class="platform-button">
+          <span class="platform-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="3.5" y="6.5" width="17" height="11" rx="3"></rect>
+              <path d="M10.5 10l4 2-4 2v-4z"></path>
+            </svg>
+          </span>
+          YouTube
+        </a>
+
+        <a href="#services" class="platform-button">
+          <span class="platform-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 19l1-3.5A7.5 7.5 0 1 1 8.5 18L5 19z"></path>
+              <path d="M9.5 8.5c.4 3 2.2 4.8 5 6"></path>
+              <path d="M10 8.5l1 1.5"></path>
+              <path d="M14.5 14.5l1.5.8"></path>
+            </svg>
+          </span>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
 
   <section class="services-section" id="services">
     <div class="services-wrap">
@@ -531,5 +1372,336 @@
       </div>
     </div>
   </section>
+
+  <section class="how-section" id="how-it-works">
+    <div class="how-wrap">
+      <div class="section-kicker">How it works</div>
+
+      <h2>Simple process. Powerful results.</h2>
+
+      <div class="process-row">
+        <div class="process-card">
+          <div class="process-number">1</div>
+          <div class="process-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 8.5h12l1 12H5l1-12z"></path>
+              <path d="M9 8.5V6a3 3 0 0 1 6 0v2.5"></path>
+            </svg>
+          </div>
+          <h3>Choose a Service</h3>
+          <p>
+            Select the service you need and add details.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">2</div>
+          <div class="process-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M17.5 18a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.3-1.8A5.2 5.2 0 0 0 7 18h10.5z"></path>
+              <path d="M12 16V9"></path>
+              <path d="M9.5 11.5L12 9l2.5 2.5"></path>
+            </svg>
+          </div>
+          <h3>Upload Your Brief</h3>
+          <p>
+            Send your logo, references, keywords and platform preferences.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">3</div>
+          <div class="process-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 20l4.5-1 10-10a2.2 2.2 0 0 0-3.1-3.1l-10 10L4 20z"></path>
+              <path d="M13.8 7.5l2.7 2.7"></path>
+            </svg>
+          </div>
+          <h3>We Create & Prepare</h3>
+          <p>
+            Our creative & technical team builds and prepares your assets for visibility.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">4</div>
+          <div class="process-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 3L3.8 10.5l7.2 2.5L14 20.2 21 3z"></path>
+              <path d="M11 13l10-10"></path>
+            </svg>
+          </div>
+          <h3>We Submit / Deliver</h3>
+          <p>
+            We handle the technical process and deliver your assets on time.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">5</div>
+          <div class="process-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 19V5"></path>
+              <path d="M4 19h16"></path>
+              <path d="M8 16v-4"></path>
+              <path d="M12 16V9"></path>
+              <path d="M16 16v-7"></path>
+              <path d="M8 9l4-3 4 2 3-4"></path>
+              <path d="M17 4h2v2"></path>
+            </svg>
+          </div>
+          <h3>Get Discovered</h3>
+          <p>
+            Your GIFs, stickers and filters are ready to be found and used everywhere.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="packages-section" id="pricing">
+    <div class="packages-wrap">
+      <div class="section-kicker">Packages</div>
+
+      <h2>choose the perfect pack for you</h2>
+
+      <div class="packages-grid">
+        <div class="package-card">
+          <div class="package-top">
+            <div class="package-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4.5 16.5c-1 1-1.5 2.6-1.5 4.5 1.9 0 3.5-.5 4.5-1.5"></path>
+                <path d="M8 18L6 16"></path>
+                <path d="M12.5 17.5L6.5 11.5"></path>
+                <path d="M7 12c1.5-4.7 5.2-8 11.5-9.5 1.1 6.3-2.2 10-9 11.5L7 12z"></path>
+                <path d="M15 6.8h.01"></path>
+              </svg>
+            </div>
+
+            <div>
+              <h3 class="package-name">Starter Creator Pack</h3>
+              <div class="price-line">
+                <span class="price">$99</span>
+                <span class="one-time">/ one-time</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="package-description">
+            Perfect for creators who are just getting started.
+          </p>
+
+          <ul class="package-features">
+            <li>5 Stickers</li>
+            <li>3 GIFs</li>
+            <li>Basic Keyword Setup</li>
+            <li>1 Platform Submission Support</li>
+            <li>Delivery in 3–5 Business Days</li>
+          </ul>
+
+          <a href="#contact" class="package-button">Choose This Pack</a>
+        </div>
+
+        <div class="package-card featured">
+          <div class="popular-badge">✦ Most Popular</div>
+
+          <div class="package-top">
+            <div class="package-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M13 2L4 14h7l-1 8 10-14h-7l0-6z"></path>
+              </svg>
+            </div>
+
+            <div>
+              <h3 class="package-name">Visibility Pack</h3>
+              <div class="price-line">
+                <span class="price">$199</span>
+                <span class="one-time">/ one-time</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="package-description">
+            Grow your visibility with a complete asset & submission support.
+          </p>
+
+          <ul class="package-features">
+            <li>10 Stickers</li>
+            <li>5 GIFs</li>
+            <li>Advanced Keyword & Metadata Setup</li>
+            <li>Up to 2 Platform Submission Support</li>
+            <li>Delivery in 3–7 Business Days</li>
+          </ul>
+
+          <a href="#contact" class="package-button">Choose This Pack</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-top">
+            <div class="package-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 19h16"></path>
+                <path d="M5.5 17L4 7l5 4 3-6 3 6 5-4-1.5 10H5.5z"></path>
+                <path d="M12 5h.01"></path>
+              </svg>
+            </div>
+
+            <div>
+              <h3 class="package-name">Pro Creator Launch</h3>
+              <div class="price-line">
+                <span class="price">$349</span>
+                <span class="one-time">/ one-time</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="package-description">
+            All-in-one pack for creators who want to launch big.
+          </p>
+
+          <ul class="package-features">
+            <li>15 Stickers</li>
+            <li>10 GIFs</li>
+            <li>Face Filter Concept</li>
+            <li>AI Visuals & Reels (5)</li>
+            <li>Up to 3 Platform Submission Support</li>
+            <li>Delivery in 5–10 Business Days</li>
+          </ul>
+
+          <a href="#contact" class="package-button">Choose This Pack</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brief-section" id="contact">
+    <div class="brief-wrap">
+      <div class="section-kicker">Project Brief Form</div>
+
+      <h2>start your creator content project</h2>
+
+      <form class="brief-form" action="#" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="creator-name">Name / Creator Name</label>
+            <input id="creator-name" name="creator-name" type="text" placeholder="Creator name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="hello@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="instagram">Instagram username</label>
+            <input id="instagram" name="instagram" type="text" placeholder="@username">
+          </div>
+
+          <div class="form-group">
+            <label for="tiktok">TikTok username</label>
+            <input id="tiktok" name="tiktok" type="text" placeholder="@username">
+          </div>
+
+          <div class="form-group">
+            <label for="youtube">YouTube username</label>
+            <input id="youtube" name="youtube" type="text" placeholder="Channel name">
+          </div>
+
+          <div class="form-group">
+            <label for="selected-service">Selected service</label>
+            <select id="selected-service" name="selected-service">
+              <option selected>Visibility Pack</option>
+              <option>Starter Creator Pack</option>
+              <option>Pro Creator Launch</option>
+              <option>GIF & Sticker Publishing</option>
+              <option>Face Filters & AR Effects</option>
+              <option>AI Visuals & Reels</option>
+              <option>Creator Brand Assets</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label for="target-platforms">Target platforms</label>
+            <input id="target-platforms" name="target-platforms" type="text" placeholder="Instagram, TikTok, Snapchat, YouTube, WhatsApp">
+          </div>
+
+          <div class="form-group">
+            <label for="brand-colors">Brand colors</label>
+            <input id="brand-colors" name="brand-colors" type="text" placeholder="Lime green, black, white...">
+          </div>
+
+          <div class="form-group">
+            <label for="keywords">Keywords</label>
+            <input id="keywords" name="keywords" type="text" placeholder="Creator name, niche, phrases...">
+          </div>
+
+          <div class="form-group full">
+            <label for="upload-files">Upload logo / photos / references</label>
+            <label class="upload-box" for="upload-files">
+              Drop files here or click to upload — demo preview
+              <input id="upload-files" name="upload-files" type="file" multiple>
+            </label>
+          </div>
+
+          <div class="form-group full">
+            <label for="project-description">Project description</label>
+            <textarea id="project-description" name="project-description" placeholder="Tell us what you want to create..."></textarea>
+          </div>
+
+          <div class="form-group full">
+            <label for="delivery-time">Preferred delivery time</label>
+            <select id="delivery-time" name="delivery-time">
+              <option selected>3–5 business days</option>
+              <option>3–7 business days</option>
+              <option>5–10 business days</option>
+              <option>Flexible timeline</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="submit-brief" type="submit">submit project brief</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">Catch <span>Creators</span></a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick links</h3>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="#services">GIFs&Stickers</a></li>
+          <li><a href="#services">Face filters</a></li>
+          <li><a href="#services">AI visuals</a></li>
+          <li><a href="#services">Brand assets</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Newsletter</h3>
+        <p class="newsletter-text">
+          Get creator-tech updates and launch tips.
+        </p>
+
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="newsletter-email" placeholder="Email address">
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
